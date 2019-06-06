@@ -1,0 +1,236 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Roboto+Condensed&display=swap');
+* { /* Generally eaiser to just start things off with no margins/padding and change them later as desired*/
+	margin:0;
+	padding:0;
+}
+img { /* Removes the space under images, can change later if needed */
+	display:block;
+}
+html {
+	height:100%
+}
+
+/* CSS for the header element */
+header {
+	height:50px;
+	width:100%;
+	position:fixed;
+	z-index:999;
+	background-color:#343d46;
+	font-family:"Open Sans", sans-serif;
+	text-transform:uppercase;
+	box-shadow:0 4px 2px -2px gray;
+}
+header p {
+	float:left;
+	line-height:50px;
+	margin-left:30px;
+	color:#c0c5ce;
+	font-size:16px;
+	font-weight:400;
+	letter-spacing:2px;
+
+}
+header ul {
+	float:right;
+	line-height:46px;
+}
+header ul li {
+	display:inline;
+	list-style-type:none;
+	margin-right:30px;
+}
+header ul li a {
+	color:#FFF;
+	font-size:12px;
+	font-weight:600;
+	letter-spacing:2px;
+	text-decoration:none;
+}
+header ul li a:hover {
+	color:#c0c5ce;
+}
+
+/* CSS for the body */
+body {
+	background-image:url(../images/background.jpg);
+	background-size:cover;
+	height:100%;
+	background-attachment:fixed;
+}
+
+/* CSS for the subheader */
+section.subheader {
+	padding-top:50px;
+	height:150px;
+	width:1300px;
+	max-width:100%;
+	margin-left:auto;
+	margin-right:auto;
+	position:relative;
+	text-align:center;
+	font-family:"Open Sans", sans-serif;
+	border-left:5px #c0c5ce solid;
+	border-right:5px #c0c5ce solid;
+	border-bottom:1px #c0c5ce solid;
+	background-color:#e2e5e9;
+}
+section.subheader p {
+	padding-top:40px;
+	color:#394147;
+	font-size:50px;
+	font-weight:400;
+}
+
+/* CSS for the main region of each page */
+section.mainblock {
+	margin-left:auto;
+	margin-right:auto;
+	max-width:1300px;
+	min-height:calc(100% - 201px);
+	overflow:auto;
+	clear:both;
+	background-color:#e2e5e9;
+	position:relative;
+	border-left:5px #c0c5ce solid;
+	border-right:5px #c0c5ce solid;
+}
+
+/* CSS for the home/about page*/
+section.about div {
+	margin-left:100px;
+	margin-right:100px;
+	padding-top:50px;
+	font-family:"Open Sans", sans-serif;
+	color:#394147;
+}
+section.about div img {
+	position:relative;
+	float:right;
+	margin-left:25px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* CSS for the project page */
+section.projects div.left {
+	position:relative;
+	float:left;
+	margin-left:100px;
+	margin-top:50px;
+	margin-bottom:50px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+section.projects div.right {
+	position:relative;
+	float:right;
+	margin-right:100px;
+	margin-top:50px;
+	margin-bottom:50px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+section.projects image {
+	position:relative;
+	display:block;
+	width:500px;
+}
+section.projects div.overlay {
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	background:#343d46;
+	width:100%;
+	height:100%;
+	transition:.75s ease;
+	opacity:0;
+	font-family:"Open Sans", sans-serif;
+}
+section.projects div.overlay:hover {
+	opacity:0.8;
+}
+section.projects div.overlay div.otitle{
+	margin-top:20px;
+	margin-left:15px;
+	margin-right:15px;
+	padding-bottom:20px;
+	clear:both;
+	text-align:center;
+	color:#FFF;
+	font-size:30px;
+	font-weight:400;
+	border-bottom:2px;
+	border-bottom-color:#c0c5ce;
+	border-bottom-style:solid;
+}
+section.projects div.overlay div.odesc{
+	margin-top:20px;
+	margin-left:15px;
+	margin-right:15px;
+	padding-bottom:20px;
+	clear:both;
+	text-align:center;
+	color:#FFF;
+	font-size:14px;
+	font-weight:500;
+	border-bottom:2px;
+	border-bottom-color:#c0c5ce;
+	border-bottom-style:solid;
+}
+section.projects div.overlay div.olink {
+	margin-top:20px;
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+	font-size:18px;
+	font-weight:700;
+}
+section.projects div.overlay div.olink div.oleft {
+	margin-left:15px;
+	float:left;
+}
+section.projects div.overlay div.olink div.oright {
+	margin-right:15px;
+	float:right;
+}
+section.projects div.overlay div.olink div.oleft a, section.projects div.overlay div.olink div.oright a {
+	color:#FFF;
+	text-decoration:underline;
+}
+section.projects div.overlay div.olink div.oleft a:hover, section.projects div.overlay div.olink div.oright a:hover {
+	color:#c0c5ce;
+	text-decoration:underline;
+}
+
+/* CSS for the contact page */
+section.contact div.firstcontact {
+	padding-top:50px;
+}
+section.contact div.contactlink {
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:25px;
+	overflow:auto;
+	width:500px;
+	height:64px;
+}
+section.contact div.contactlink img {
+	position:relative;
+	float:left;
+}
+section.contact div.contactlink p, section.contact div.contactlink a {
+	margin-left:20px;
+	float:left;
+	line-height:64px;
+	font-family:"Roboto Condensed";
+	color:#000;
+	font-size:30px;
+	font-weight:bold;
+}
+section.contact div.contactlink a {
+	text-decoration:underline;
+}
+section.contact div.contactlink a:hover {
+	color:#394147;
+}
